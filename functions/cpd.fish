@@ -1,6 +1,6 @@
-function cpd --description 'Change parent-sibling directory'
+function cpd --description 'Change to parent-sibling directory'
   if test (count $argv) -eq 0
-    printf ( _ "%s: Required target directory name\n") crd
+    printf ( _ "%s: Required target directory name\n") cpd
     return 1
   end
 
@@ -23,7 +23,7 @@ function cpd --description 'Change parent-sibling directory'
   end
 
   if test $found = false
-    printf ( _ "%s: Target directory not found\n") crd
+    printf ( _ "%s: Target directory not found\n") cpd
     cd $current_dir
     return 1
   end
